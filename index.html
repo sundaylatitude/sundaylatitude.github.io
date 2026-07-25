@@ -1,48 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Sunday Latitude Gateway</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-<style>
-  body {
-    background-color: #F8F7F4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-    font-family: 'Playfair Display', serif;
-    color: #2A2C2D;
-  }
-  .container {
-    text-align: left;
-    max-width: 600px;
-    padding: 20px;
-  }
-  h1 {
-    font-size: 2.2rem;
-    font-weight: normal;
-    line-height: 1.6;
-    margin-bottom: 40px;
-  }
-  a.button {
-    background-color: #2A2C2D;
-    color: #F8F7F4;
-    text-decoration: none;
-    padding: 12px 36px;
-    font-size: 1.2rem;
-    display: inline-block;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sunday Latitude</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #F8F7F4;
+      color: #2A2C2D;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 40px 20px;
+      font-family: "Playfair Display", serif;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 680px;
+      text-align: left;
+    }
+
+    .intro-copy {
+      margin-bottom: 42px;
+    }
+
+    .intro-copy p {
+      margin: 0 0 24px;
+      font-size: 1.65rem;
+      font-weight: normal;
+      line-height: 1.55;
+    }
+
+    .intro-copy p:first-child {
+      font-size: 2.2rem;
+      line-height: 1.4;
+    }
+
+    .intro-copy p:last-child {
+      margin-bottom: 0;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #2A2C2D;
+      color: #F8F7F4;
+      padding: 14px 34px;
+      font-size: 1.05rem;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: opacity 0.2s ease;
+    }
+
+    .button:hover,
+    .button:focus {
+      opacity: 0.82;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        align-items: flex-start;
+        padding-top: 80px;
+      }
+
+      .intro-copy p {
+        font-size: 1.25rem;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+
+      .intro-copy p:first-child {
+        font-size: 1.75rem;
+      }
+
+      .button {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <div class="container">
-    <h1>The ultimate luxury is having more choice over your time.
+  <main class="container">
+    <div class="intro-copy">
+      <p>
+        The ultimate luxury is having more choice over your time.
+      </p>
 
-Sunday Latitude explores the possibility of building a flexible online business alongside your current life.
+      <p>
+        Sunday Latitude explores the possibility of building a flexible online
+        business alongside your current life.
+      </p>
 
-Continue to learn more about the opportunity and decide whether it may be right for you.</h1>
-    <a href="https://www.sundaylatitude.com" class="button">Explore the Opportunity</a>
-  </div>
+      <p>
+        Continue to learn more about the opportunity and decide whether it may
+        be right for you.
+      </p>
+    </div>
+
+    <a
+      href="https://www.sundaylatitude.com"
+      class="button"
+    >
+      Explore the Opportunity
+    </a>
+  </main>
 </body>
 </html>
