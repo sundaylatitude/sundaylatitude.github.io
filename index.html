@@ -6,91 +6,138 @@
 
   <title>Sunday Latitude</title>
 
-  <!-- Arc logo favicon -->
-  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@400;500&display=swap"
     rel="stylesheet"
   >
 
   <style>
+    :root {
+      --background: #F5F4F0;
+      --foreground: #474747;
+    }
+
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      background-color: var(--background);
     }
 
     body {
       min-height: 100vh;
       margin: 0;
-      padding: 40px 20px;
+      padding: 48px 24px;
 
       display: flex;
       align-items: center;
       justify-content: center;
 
-      background-color: #F8F7F4;
-      color: #2A2C2D;
-      font-family: "Playfair Display", serif;
+      background-color: var(--background);
+      color: var(--foreground);
+      font-family: "Inter", Arial, sans-serif;
     }
 
     .container {
       width: 100%;
       max-width: 680px;
+      text-align: left;
     }
 
-    .intro-copy p {
-      display: block;
-      margin-top: 0;
-      margin-bottom: 28px;
-
-      font-size: 1.55rem;
-      font-weight: normal;
-      line-height: 1.55;
+    .intro-copy {
+      margin-bottom: 40px;
     }
 
-    .intro-copy .opening-line {
-      font-size: 2.1rem;
-      line-height: 1.4;
+    .headline {
+      max-width: 640px;
+      margin: 0 0 30px;
+
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(2.2rem, 5vw, 3.65rem);
+      font-weight: 400;
+      line-height: 1.16;
+      letter-spacing: -0.015em;
     }
 
-    .intro-copy p:last-child {
-      margin-bottom: 42px;
+    .supporting-copy {
+      max-width: 590px;
+      margin: 0 0 20px;
+
+      font-family: "Inter", Arial, sans-serif;
+      font-size: 1.08rem;
+      font-weight: 400;
+      line-height: 1.7;
+      letter-spacing: 0;
+    }
+
+    .supporting-copy:last-child {
+      margin-bottom: 0;
     }
 
     .button {
-      display: inline-block;
-      padding: 14px 34px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
 
-      background-color: #2A2C2D;
-      color: #F8F7F4;
+      min-height: 52px;
+      padding: 15px 30px;
+      border: 1px solid var(--foreground);
 
-      font-size: 1.05rem;
+      background-color: var(--foreground);
+      color: var(--background);
+
+      font-family: "Inter", Arial, sans-serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: 0.025em;
       text-decoration: none;
-      letter-spacing: 0.02em;
+
+      transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        opacity 0.2s ease;
     }
 
-    .button:hover,
-    .button:focus {
-      opacity: 0.82;
+    .button:hover {
+      background-color: var(--background);
+      color: var(--foreground);
+    }
+
+    .button:focus-visible {
+      outline: 2px solid var(--foreground);
+      outline-offset: 4px;
     }
 
     @media (max-width: 600px) {
       body {
         align-items: flex-start;
-        padding-top: 70px;
+        padding: 72px 22px 40px;
       }
 
-      .intro-copy p {
-        margin-bottom: 22px;
-        font-size: 1.2rem;
+      .headline {
+        margin-bottom: 26px;
+        font-size: 2.25rem;
+        line-height: 1.18;
       }
 
-      .intro-copy .opening-line {
-        font-size: 1.7rem;
+      .supporting-copy {
+        font-size: 1rem;
+        line-height: 1.65;
+        margin-bottom: 18px;
+      }
+
+      .intro-copy {
+        margin-bottom: 32px;
       }
 
       .button {
         width: 100%;
+        min-height: 54px;
         text-align: center;
       }
     }
@@ -99,23 +146,20 @@
 
 <body>
   <main class="container">
-
     <div class="intro-copy">
-
-      <p class="opening-line">
+      <h1 class="headline">
         The ultimate luxury is having more choice over your time.
-      </p>
+      </h1>
 
-      <p>
+      <p class="supporting-copy">
         Sunday Latitude explores the possibility of building a flexible online
         business alongside your current life.
       </p>
 
-      <p>
+      <p class="supporting-copy">
         Continue to learn more about the opportunity and decide whether it may
         be right for you.
       </p>
-
     </div>
 
     <a
@@ -124,7 +168,6 @@
     >
       Explore the Opportunity
     </a>
-
   </main>
 </body>
 </html>
